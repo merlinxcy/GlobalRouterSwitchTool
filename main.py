@@ -3,6 +3,8 @@ import sys
 import shlex
 from lib import telnetlibs
 from lib import sshlib
+from lib import arplib
+from lib import vlanlib
 class GUI:
 	def makefgui():
 		pass
@@ -40,7 +42,7 @@ class commandline:
 		[10]stp attack
 		[11]vlan hopping attack
 		[12]vtp attack
-		[13]yersinia
+		[13]dtp attack
 		[0]host alive detect
 ----------------------------------------
 		'''
@@ -71,9 +73,13 @@ class commandline:
 				pass
 			elif cmd[1]=="4":
 				print 4
+				a=arplib.arpfloodlib()
+				a.run(1,"192.168.237.66")
 				pass
 			elif cmd[1]=="5":
 				print 5
+				a=arplib.arpposion()
+				a.run("192.168.237.66","192.168.237.11")
 				pass
 			elif cmd[1]=="6":
 				print 6
@@ -92,6 +98,8 @@ class commandline:
 				pass
 			elif cmd[1]=="11":
 				print 11
+				a=vlanlib.vlanlib("192.168.237.66")
+				a.run_vlanhopping()
 				pass
 			elif cmd[1]=="12":
 				print 12
@@ -119,12 +127,6 @@ class commandline:
 
 	def tokenize(self,cmd):
 		return shlex.split(cmd)
-
-
-
-
-
-
 
 
 

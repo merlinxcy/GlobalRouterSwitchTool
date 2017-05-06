@@ -1,0 +1,220 @@
+# yersinia v0.7.3 started in merlin on Sat May  6 16:51:18 2017
+
+Network Interface eth0
+
+ eth0 iflinkname EN10MB
+ eth0 iflinkdesc Ethernet
+ eth0 MAC = 000c.29d7.9436
+Network Interface lo
+
+ lo iflinkname EN10MB
+ lo iflinkdesc Ethernet
+ lo MAC = 0000.0000.0000
+Network Interface bluetooth0
+Network Interface nflog
+Network Interface nfqueue
+Network Interface usbmon1
+pcap_open_live failed: usbmon1: Can't open USB bus file /sys/kernel/debug/usbmon/1t: No such file or directory
+Network Interface usbmon2
+pcap_open_live failed: usbmon2: Can't open USB bus file /sys/kernel/debug/usbmon/2t: No such file or directory
+
+ th_uptime thread = -565668096
+
+ gtk_gui_th = -574060800
+ eth0 libnet_handler D8148A00
+Ohhh no hay paquetes del modo 1, fila 0 :(
+Ohhh no hay paquetes del modo 9, fila 0 :(
+Ohhh no hay paquetes del modo 9, fila 0 :(
+Ohhh no hay paquetes del modo 1, fila 0 :(
+Ohhh no hay paquetes del modo 9, fila 0 :(
+Ohhh no hay paquetes del modo 5, fila 0 :(
+Ohhh no hay paquetes del modo 9, fila 0 :(
+ attack_launch: -574060800 Attack thread 139851913922304 is born!!
+Ohhh no hay paquetes del modo 9, fila 0 :(
+Ohhh no hay paquetes del modo 9, fila 0 :(
+
+ thread_destroy -574060800 destroying -811170048...
+ attack_th_exit -> attack_th.stop=1   attack_th.id=-811170048....
+ attack_th_exit: -811170048 finished
+ thread_destroy -574060800 after PTHREAD_JOIN -811170048...
+Ohhh no hay paquetes del modo 9, fila 0 :(
+Ohhh no hay paquetes del modo 9, fila 0 :(
+ attack_launch: -574060800 Attack thread 139851913922304 is born!!
+
+ thread_destroy -574060800 destroying -811170048...
+ attack_th_exit -> attack_th.stop=1   attack_th.id=-811170048....
+ attack_th_exit: -811170048 finished
+ thread_destroy -574060800 after PTHREAD_JOIN -811170048...
+Ohhh no hay paquetes del modo 9, fila 0 :(
+Ohhh no hay paquetes del modo 9, fila 0 :(
+ attack_launch: -574060800 Attack thread 139851913922304 is born!!
+
+ thread_destroy -574060800 destroying -811170048...
+ attack_th_exit -> attack_th.stop=1   attack_th.id=-811170048....
+ attack_th_exit: -811170048 finished
+ thread_destroy -574060800 after PTHREAD_JOIN -811170048...
+# yersinia v0.7.3 started in merlin on Sat May  6 17:39:31 2017
+
+Network Interface eth0
+
+ eth0 iflinkname EN10MB
+ eth0 iflinkdesc Ethernet
+ eth0 MAC = 000c.29d7.9436
+Network Interface lo
+
+ lo iflinkname EN10MB
+ lo iflinkdesc Ethernet
+ lo MAC = 0000.0000.0000
+Network Interface bluetooth0
+Network Interface nflog
+Network Interface nfqueue
+Network Interface usbmon1
+pcap_open_live failed: usbmon1: Can't open USB bus file /sys/kernel/debug/usbmon/1t: No such file or directory
+Network Interface usbmon2
+pcap_open_live failed: usbmon2: Can't open USB bus file /sys/kernel/debug/usbmon/2t: No such file or directory
+
+ th_uptime thread = 608798464
+
+ gtk_gui_th = 600405760
+ eth0 libnet_handler 1C1495E0
+Ohhh no hay paquetes del modo 1, fila 0 :(
+Ohhh no hay paquetes del modo 6, fila 0 :(
+Ohhh no hay paquetes del modo 7, fila 0 :(
+Ohhh no hay paquetes del modo 9, fila 0 :(
+ attack_launch: 600405760 Attack thread 139835966318336 is born!!
+
+ thread_destroy 600405760 destroying 421095168...
+ attack_th_exit -> attack_th.stop=1   attack_th.id=421095168....
+ attack_th_exit: 421095168 finished
+ thread_destroy 600405760 after PTHREAD_JOIN 421095168...
+Ohhh no hay paquetes del modo 9, fila 0 :(
+Ohhh no hay paquetes del modo 9, fila 0 :(
+ attack_launch: 600405760 Attack thread 139835966318336 is born!!
+# yersinia v0.7.3 started in merlin on Sat May  6 18:06:28 2017
+
+Network Interface eth0
+
+ eth0 iflinkname EN10MB
+ eth0 iflinkdesc Ethernet
+ eth0 MAC = 000c.29d7.9436
+Network Interface lo
+
+ lo iflinkname EN10MB
+ lo iflinkdesc Ethernet
+ lo MAC = 0000.0000.0000
+Network Interface bluetooth0
+Network Interface nflog
+Network Interface nfqueue
+Network Interface usbmon1
+pcap_open_live failed: usbmon1: Can't open USB bus file /sys/kernel/debug/usbmon/1t: No such file or directory
+Network Interface usbmon2
+pcap_open_live failed: usbmon2: Can't open USB bus file /sys/kernel/debug/usbmon/2t: No such file or directory
+
+ th_uptime thread = -26368256
+
+ gtk_gui_th = -34760960
+ eth0 libnet_handler F81495E0
+Ohhh no hay paquetes del modo 9, fila 0 :(
+# yersinia v0.7.3 started in merlin on Sat May  6 18:39:15 2017
+
+Network Interface eth0
+
+ eth0 iflinkname EN10MB
+ eth0 iflinkdesc Ethernet
+ eth0 MAC = 000c.29d7.9436
+Network Interface lo
+
+ lo iflinkname EN10MB
+ lo iflinkdesc Ethernet
+ lo MAC = 0000.0000.0000
+Network Interface bluetooth0
+Network Interface nflog
+Network Interface nfqueue
+Network Interface usbmon1
+pcap_open_live failed: usbmon1: Can't open USB bus file /sys/kernel/debug/usbmon/1t: No such file or directory
+Network Interface usbmon2
+pcap_open_live failed: usbmon2: Can't open USB bus file /sys/kernel/debug/usbmon/2t: No such file or directory
+ g00dbye function called from 950016384
+
+ th_uptime thread = 808941312
+
+ ints_destroy started...
+ ints_destroy killing pcap_listener(817334016)...
+
+ thread_destroy 950016384 destroying 817334016...
+ thread_destroy 950016384 after PTHREAD_JOIN 817334016...
+ ints_destroy finished...
+ Showing MOTD..
+# yersinia finished on Sat May  6 18:39:15 2017
+
+# yersinia v0.7.3 started in merlin on Sat May  6 18:39:31 2017
+
+Network Interface eth0
+
+ eth0 iflinkname EN10MB
+ eth0 iflinkdesc Ethernet
+ eth0 MAC = 000c.29d7.9436
+Network Interface lo
+
+ lo iflinkname EN10MB
+ lo iflinkdesc Ethernet
+ lo MAC = 0000.0000.0000
+Network Interface bluetooth0
+Network Interface nflog
+Network Interface nfqueue
+Network Interface usbmon1
+pcap_open_live failed: usbmon1: Can't open USB bus file /sys/kernel/debug/usbmon/1t: No such file or directory
+Network Interface usbmon2
+pcap_open_live failed: usbmon2: Can't open USB bus file /sys/kernel/debug/usbmon/2t: No such file or directory
+
+ th_uptime thread = 123508480
+
+ th_tty_peer thread = 115115776...
+Error when parsing...
+
+ th_tty_peer 115115776 finished...
+ g00dbye function called from 264583552
+
+ ints_destroy started...
+ ints_destroy killing pcap_listener(131901184)...
+
+ thread_destroy 264583552 destroying 131901184...
+ thread_destroy 264583552 after PTHREAD_JOIN 131901184...
+ ints_destroy finished...
+ Showing MOTD..
+# yersinia finished on Sat May  6 18:39:32 2017
+
+# yersinia v0.7.3 started in merlin on Sat May  6 18:41:02 2017
+
+Network Interface eth0
+
+ eth0 iflinkname EN10MB
+ eth0 iflinkdesc Ethernet
+ eth0 MAC = 000c.29d7.9436
+Network Interface lo
+
+ lo iflinkname EN10MB
+ lo iflinkdesc Ethernet
+ lo MAC = 0000.0000.0000
+Network Interface bluetooth0
+Network Interface nflog
+Network Interface nfqueue
+Network Interface usbmon1
+pcap_open_live failed: usbmon1: Can't open USB bus file /sys/kernel/debug/usbmon/1t: No such file or directory
+Network Interface usbmon2
+pcap_open_live failed: usbmon2: Can't open USB bus file /sys/kernel/debug/usbmon/2t: No such file or directory
+
+ th_uptime thread = -1612712192
+
+ gtk_gui_th = -1621104896
+ eth0 libnet_handler 98149550
+Ohhh no hay paquetes del modo 10, fila 0 :(
+Ohhh no hay paquetes del modo 10, fila 0 :(
+Ohhh no hay paquetes del modo 1, fila 0 :(
+Ohhh no hay paquetes del modo 10, fila 0 :(
+Ohhh no hay paquetes del modo 9, fila 0 :(
+Ohhh no hay paquetes del modo 10, fila 0 :(
+ attack_launch: -1621104896 Attack thread 140112704829184 is born!!
+
+ thread_destroy -1621104896 destroying -2013268224...
+ thread_destroy -1621104896 after PTHREAD_JOIN -2013268224...

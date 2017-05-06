@@ -5,6 +5,7 @@ from lib import telnetlibs
 from lib import sshlib
 from lib import arplib
 from lib import vlanlib
+from lib import stplib
 class GUI:
 	def makefgui():
 		pass
@@ -49,17 +50,23 @@ class commandline:
 
 	def run_exec(self,cmd):
 		#sys.stdout.write(cmd)
-		print cmd
+		#print cmd
 		#check 1
-		if cmd[0]=="exit":
+		if len(cmd)==0:
+			pass
+		elif cmd[0]=="exit":
 			return self.SHELL_STATUS_STOP
 		elif cmd[0]=="set":
-			if cmd[1]=="host":
+			if len(cmd)!=3:
+				print "[-]argument error"
+			elif cmd[1]=="host":
 				self.host_ip=cmd[2]
 			elif cmd[1]=="target":
 				self.target_ip=cmd[2]
 		elif cmd[0]=="use":
-			if cmd[1]=="1":
+			if len(cmd)!=2:
+				print "[-]argument error"
+			elif cmd[1]=="1":
 				print 1
 				a=telnetlibs.telnetlibs(self.target_ip)
 				a.run()
@@ -74,12 +81,12 @@ class commandline:
 			elif cmd[1]=="4":
 				print 4
 				a=arplib.arpfloodlib()
-				a.run(1,"192.168.237.66")
+				a.run(1,self.target_ip)
 				pass
 			elif cmd[1]=="5":
 				print 5
 				a=arplib.arpposion()
-				a.run("192.168.237.66","192.168.237.11")
+				a.run(self.target_ip,"192.168.237.11")
 				pass
 			elif cmd[1]=="6":
 				print 6
@@ -95,10 +102,13 @@ class commandline:
 				pass
 			elif cmd[1]=="10":
 				print 10
+				a=stplib.stplib(self.target_ip)
+				a.run_confflood()
+				a.run_tcnflood()
 				pass
 			elif cmd[1]=="11":
 				print 11
-				a=vlanlib.vlanlib("192.168.237.66")
+				a=vlanlib.vlanlib(self.target_ip)
 				a.run_vlanhopping()
 				pass
 			elif cmd[1]=="12":
@@ -108,7 +118,7 @@ class commandline:
 				print 13
 				pass
 		else :
-			sys.stdout.write("[-]unkown command!")
+			print "[-]unkown command!"
 		
 		return self.SHELL_STATUS_RUN
 
@@ -119,6 +129,7 @@ class commandline:
 		status=self.SHELL_STATUS_RUN
 		while  status==self.SHELL_STATUS_RUN:
 			sys.stdout.write('>  ')
+			#print 1
 			sys.stdout.flush()
 			cmd=sys.stdin.readline()
 			#cmd_tokens=cmd

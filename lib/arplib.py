@@ -23,7 +23,7 @@ class arpfloodlib:
 			dst=self.target_arp)/\
 			IP(dst=self.target_ip,\
 			src=RandIP("*.*.*.*"))/\
-			TCP(flags="S")
+			ICMP()
 		sendp(packet,iface='eth0')
 
 	def run_inTwo(self):

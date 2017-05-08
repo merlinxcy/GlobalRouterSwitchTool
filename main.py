@@ -31,7 +31,7 @@ class commandline:
 
 		Welcome to use GlobalRouterSwitchTool!
 		Author:Xeldax        mail:xcy_melin@outlook.com
-		[1]telnet bruteforce
+		[1]telnet bruteforce[!]
 		[2]ssh bruteforce
 		[3]router vulnerability exploit
 		[4]switch vulnerability exploit
@@ -116,6 +116,10 @@ class commandline:
 				pass
 			elif cmd[1]=="13":
 				print 13
+				pass
+			elif cmd[1]=="0":
+				print 0
+				os.system("ping "+self.target_ip)
 				pass
 		else :
 			print "[-]unkown command!"

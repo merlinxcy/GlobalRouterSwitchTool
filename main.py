@@ -8,6 +8,7 @@ from lib import vlanlib
 from lib import stplib
 from lib import dtplib
 from lib import cdp_lldp
+from exp import *
 class GUI:
 	def makefgui():
 		pass
@@ -82,6 +83,7 @@ class commandline:
 				pass
 			elif cmd[1]=="4":
 				print 4
+				CVE20173881.exp("--set",self.target_ip)
 				pass
 			elif cmd[1]=="5":
 				print 5

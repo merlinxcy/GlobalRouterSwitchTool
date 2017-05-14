@@ -8,7 +8,7 @@ from lib import vlanlib
 from lib import stplib
 from lib import dtplib
 from lib import cdp_lldp
-from exp import *
+from exp import CVE20173881
 class GUI:
 	def makefgui():
 		pass

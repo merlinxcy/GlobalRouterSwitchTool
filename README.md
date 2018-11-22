@@ -1,4 +1,4 @@
-# 针对交换机路由器攻防的渗透工具设计
+# GlobalRouterSwitchTool
 ## 目前功能
 exp
 暴力破解
